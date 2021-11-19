@@ -26,7 +26,7 @@ public class ClasseDeTesteTest {
                         Integer.class,Integer.class);
         notificador.setAccessible(true);
 
-        Object invoke = notificador.invoke(classeDeTeste, 1,1);
+        Integer invoke = (Integer) notificador.invoke(classeDeTeste, 1,1);
 
         Assert.assertThat(invoke,is(2));
     }
